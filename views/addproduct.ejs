@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Add Product</title>
+
+    <!-- CSS -->
+    <style>
+        .myForm {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size: 0.8em;
+            width: 50%;
+            padding: 6%;
+            /* border: 5px solid rgb(218, 74, 74); */
+        }
+
+        .myForm * {
+            box-sizing: border-box;
+        }
+
+        .myForm fieldset {
+            border: none;
+            padding: 0;
+        }
+
+        .myForm legend,
+        .myForm label {
+            padding: 15px;
+            font-weight: 12px;
+        }
+
+        .myForm label.choice {
+            font-size: 12px;
+            ;
+            font-weight: bolder;
+        }
+
+        .myForm input[type="text"],
+        .myForm input[type="text"],
+        .myForm select,
+
+
+        .myForm button {
+            padding: 1em;
+            border-radius: 0.5em;
+            background: #eee;
+            border: none;
+            font-weight: bold;
+            margin-top: 1em;
+        }
+
+        .myForm button:hover {
+            background: rgb(245, 96, 96);
+            cursor: pointer;
+        }
+
+        /* .main {
+            background-image: url('https://t4.ftcdn.net/jpg/01/97/92/77/360_F_197927767_MISwwnukYrfEH7BoyWazNXLS2p32Plcb.jpg');
+        } */
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <%- include('./partials/header.ejs'); %>
+            <div class="container" style="background-image:url('https://img.freepik.com/premium-photo/pastel-tone-purple-pink-blue-gradient-defocused-abstract-photo-smooth-lines-pantone-color-background_49683-4614.jpg?w=2000') ;">
+                <h3>Add Product Here:</h3>
+                <center>
+                <form class="myForm" method="post" style="margin: auto; width: 100%; height: 50%;"
+                    action="/addproduct1">
+
+                    <p>
+                        <label>Product Name
+                            <input type="text" name="name" id="product_name">
+                        </label>
+                        <br>
+                        <br>
+
+
+                    </p>
+
+                    <p>
+                        <label>Price</label>
+                        <input type="text" name="price" id="product_price">
+                        <br>
+                        <br>
+                    </p>
+
+                    <p>
+                        <label>Quantity
+                            <input type="text" name="quantity" id="product_quantity">
+                        </label>
+                        <br>
+                        <br>
+                    </p>
+
+                    <p>
+                        <label>Description
+                            <input type="text" name="description" id="product_desc">
+                        </label>
+                        <br>
+                        <br>
+                    </p>
+
+
+                    <p><button type="submit">Add Product</button></p>
+
+                </form>
+                </center>
+            </div>
+    </div>
+</body>
+
+</html>

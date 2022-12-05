@@ -1,0 +1,57 @@
+<html>
+
+<head>
+
+<style>
+    body{
+        background-color:aqua;
+    }
+</style>
+
+</head>
+
+<body>
+    <%- include('./partials/header.ejs'); %>
+
+        <div class="row">
+            <% for(let i=0;i<data.length; i++){%>
+                <div class="col-md-3">
+               
+
+                    <div class="card text-center" style="width: 18rem;">
+                        <img src="https://cdn.shopify.com/s/files/1/0082/6363/0953/products/WhatsAppImage2022-02-01at7.47.33PM_580x.jpg?v=1643728095"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=data[i].name%>
+                            </h5>
+                            </h5>
+                            <p class="card-text">
+                                <%=data[i].price%>
+                                    </h5>
+                            </p>
+                            <p class="card-text">
+                                <%=data[i].quantity%>
+                                    </h5>
+                            </p>
+                            <p class="card-text">
+                                <%=data[i].description%>
+                                    </h5>
+                            </p>
+                            <div class="btn-group">
+                                <a href="editproduct/<%=data[i]._id%>" class="btn btn-success">edit</a>&nbsp;&nbsp;&nbsp;
+                                <a href="deleteproduct/<%=data[i]._id%>" class="btn btn-danger">delete</a>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+                
+            <%}%>
+
+
+        </div>
+
+</body>
+
+</html>
