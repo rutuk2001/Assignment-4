@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:false}));
 
 // db connection
 
-const connectionString="mongodb://127.0.0.1:27017/mongocrudassn";
+const connectionString="mongodb+srv://Rutuja123:rutuja@cluster0.51b8dw5.mongodb.net/?retryWrites=true&w=majority";
 mongoose
   .connect(connectionString)
   .then(res=> console.log("Database connected"))
